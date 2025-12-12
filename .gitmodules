@@ -1,3 +1,6 @@
 [submodule "me-time"]
 	path = me-time
 	url = https://github.com/sakkeam/me-time.git
+[submodule "AivisSpeech-Engine"]
+	path = AivisSpeech-Engine
+	url = https://github.com/Aivis-Project/AivisSpeech-Engine.git
