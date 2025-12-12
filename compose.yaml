@@ -1,0 +1,11 @@
+services:
+  aivisspeech:
+    build: AivisSpeech-Engine
+    entrypoint: ["/bin/sh", "-c", "chown -R user:user /home/user/.local/share/AivisSpeech-Engine-Dev && exec /entrypoint.sh gosu user /opt/python/bin/poetry run python ./run.py --host 0.0.0.0"]
+    command: []
+    ports:
+      - 10101:10101
+    volumes:
+      - aivisspeech-share:/home/user/.local/share/AivisSpeech-Engine-Dev
+volumes:
+  aivisspeech-share:
